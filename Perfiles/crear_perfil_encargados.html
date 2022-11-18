@@ -17,8 +17,13 @@
   <link rel="stylesheet" href="../plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
   <!-- iCheck -->
   <link rel="stylesheet" href="../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- Select2 -->
+  <link rel="stylesheet" href="../plugins/select2/css/select2.min.css">
+  <link rel="stylesheet" href="../plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
   <!-- JQVMap -->
   <link rel="stylesheet" href="../plugins/jqvmap/jqvmap.min.css">
+  <!-- Bootstrap4 Duallistbox -->
+  <link rel="stylesheet" href="../../plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../dist/css/adminlte.min.css">
   <!-- overlayScrollbars -->
@@ -45,8 +50,6 @@
         <li class="nav-item">
           <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
         </li>
-        <h2> Avisos
-        </h2>
         </li>
       </ul>
 
@@ -159,7 +162,7 @@
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a href="Lista_Encargados/Lista_encargados.html" class="nav-link">
+                      <a href="../Lista_Encargados/Lista_encargados.html" class="nav-link">
                         <i class="fas fa-user-shield"></i>
                         <p>Lista de Encargados</p>
                       </a>
@@ -214,166 +217,100 @@
       <!-- Content Header (Page header) -->
       <div class="content-header">
         <div class="container-fluid">
-          <div class="row mb-2">
-            <div class="col-sm-6">
-              <h1 class="m-0">Aviso Importante</h1>
-            </div><!-- /.col -->
-            <div class="col-sm-6">
+          <div class="row mb-12">
+
+            <div class="col-sm-12">
               <ol class="breadcrumb float-sm-right">
               </ol>
             </div><!-- /.col -->
           </div><!-- /.row -->
-        </div><!-- /.container-fluid -->
-      </div>
-      <!-- Main content -->
-      <section class="content">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-3">
-              <div class="card">
-                <div class="card-header">
-                  <h3 class="card-title">Carpetas</h3>
-
-                  <div class="card-tools">
-                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
-                      <i class="fas fa-minus"></i>
-                    </button>
-                  </div>
-                </div>
-                <div class="card-body p-0">
-                  <ul class="nav nav-pills flex-column">
-                    <li class="nav-item active">
-                      <a href="Avisos_Realizados.html" class="nav-link">
-                        <i class="fas fa-inbox"></i> Avisos Hechos
-                        <span class="badge bg-primary float-right">12</span>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="#" class="nav-link">
-                        <i class="far fa-trash-alt"></i> Papelera
-                      </a>
-                    </li>
-
-                  </ul>
-                </div>
-                <!-- /.card-body -->
-              </div>
-            </div>
-            <!-- /.col -->
-            <div class="col-md-9">
-              <div class="card card-primary card-outline">
-                <div class="card-header">
-                  <h3 class="card-title">Leer aviso</h3>
-
-                  <div class="card-tools">
-                    <a href="#" class="btn btn-tool" title="Previous"><i class="fas fa-chevron-left"></i></a>
-                    <a href="#" class="btn btn-tool" title="Next"><i class="fas fa-chevron-right"></i></a>
-                  </div>
-                </div>
-                <!-- /.card-header -->
-                <div class="card-body p-0">
-                  <div class="mailbox-read-info">
-                    <h5>Salida Pedagógica</h5>
-                    <h6>From: mssmen@eaprotal.org
-                      <span class="mailbox-read-time float-right">04 Oct. 2022 11:03 PM</span>
-                    </h6>
-                  </div>
-                  <!-- /.mailbox-read-info -->
-                  <div class="mailbox-controls with-border text-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-default btn-sm" data-container="body" title="Delete">
-                        <i class="far fa-trash-alt"></i>
-                      </button>
-                      <button type="button" class="btn btn-default btn-sm" data-container="body" title="Reply">
-                        <i class="fas fa-reply"></i>
-                      </button>
-                      <button type="button" class="btn btn-default btn-sm" data-container="body" title="Forward">
-                        <i class="fas fa-share"></i>
-                      </button>
+          <section class="content">
+            <div class="container-fluid">
+              <div class="row">
+                <!-- left column -->
+                <div class="col-md-6">
+                  <!-- general form elements -->
+                  <div class="card card-primary">
+                    <div class="card-header">
+                      <h3 class="card-title">Crear Perfil - Celadores</h3>
                     </div>
-                    <!-- /.btn-group -->
-                    <button type="button" class="btn btn-default btn-sm" title="Print">
-                      <i class="fas fa-print"></i>
-                    </button>
-                  </div>
-                  <!-- /.mailbox-controls -->
-                  <div class="mailbox-read-message">
-                    <p>Queridos compañeros,</p>
+                    <!-- /.card-header -->
+                    <!-- form start -->
+                    <form>
+                      <div class="card-body">
+                        <div class="form-group">
+                          <label for="inputName">Nombres y Apellidos</label>
+                          <input type="text" id="inputName" class="form-control">
+                        </div>
+                        <div class="form-group">
+                          <label for="inputName">Correo</label>
+                          <input type="text" id="inputName" class="form-control">
+                        </div>
+                        <div class="form-group">
+                          <label for="inputName">C.I. </label>
+                          <input type="text" id="inputName" class="form-control">
+                        </div>
+                        <div class="form-group">
+                          <label>Teléfono:</label>
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                            </div>
+                            <input type="text" class="form-control"
+                              data-inputmask="'mask': ['999-999-9999 [x99999]', '+099 99 99 9999[9]-9999']" data-mask>
+                          </div>
+                          <!-- /.input group -->
+                        </div>
+                        <div class="form-group">
+                          <label>Fecha de Nacimiento</label>
 
-                    <p> Estamos informando nuevamente de la salida pedagogica para tercer ciclo y la media al viaje a
-                      Ytakarabí</p>
-
-                    <p>El dia de mañana debemos estar cada uno en su posicion y ver que se comporten bien los alumnos.
-                      Estan prohibido los objetos que estuvimos hablando
-                      en la reunion pasada. Si vemos a alguien con eso, avisar quien fue, y sacarle el objeto.
-
-                    <p>Gracias por su atencion. Que tengan buen día </p>
-
-                    <p>Atentamente,<br>Marco</p>
-                  </div>
-                  <!-- /.mailbox-read-message -->
-                </div>
-                <!-- /.card-body -->
-                <div class="card-footer bg-white">
-                  <ul class="mailbox-attachments d-flex align-items-stretch clearfix">
-                    <li>
-                      <span class="mailbox-attachment-icon"><i class="far fa-file-pdf"></i></span>
-
-                      <div class="mailbox-attachment-info">
-                        <a href="#" class="mailbox-attachment-name"><i class="fas fa-paperclip"></i>
-                          Sep2014-report.pdf</a>
-                        <span class="mailbox-attachment-size clearfix mt-1">
-                          <span>1,245 KB</span>
-                          <a href="#" class="btn btn-default btn-sm float-right"><i
-                              class="fas fa-cloud-download-alt"></i></a>
-                        </span>
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                            </div>
+                            <input type="text" class="form-control" data-inputmask-alias="datetime"
+                              data-inputmask-inputformat="dd/mm/yyyy" data-mask>
+                          </div>
+                          <!-- /.input group -->
+                        </div>
+                        <div class="form-group">
+                          <label for="inputDescription">Responsable de (alumno)(grado)</label>
+                          <textarea id="inputDescription" class="form-control" rows="4"></textarea>
+                        </div>
                       </div>
-                    </li>
-                    <li>
-                      <span class="mailbox-attachment-icon"><i class="far fa-file-word"></i></span>
-
-                      <div class="mailbox-attachment-info">
-                        <a href="#" class="mailbox-attachment-name"><i class="fas fa-paperclip"></i> App
-                          Description.docx</a>
-                        <span class="mailbox-attachment-size clearfix mt-1">
-                          <span>1,245 KB</span>
-                          <a href="#" class="btn btn-default btn-sm float-right"><i
-                              class="fas fa-cloud-download-alt"></i></a>
-                        </span>
+                      <br>
+                      <div class="card-body">
+                        <button type="submit" class="btn btn-primary" src="crear_perfil_encargados.html">Confirmar
+                        </button>
                       </div>
-                    </li>
-                  </ul>
-                </div>
-                <!-- /.card-footer -->
-                <div class="card-footer">
-                  <div class="float-right">
-                    <button type="button" class="btn btn-default"><i class="fas fa-reply"></i> Reply</button>
-                    <button type="button" class="btn btn-default"><i class="fas fa-share"></i> Forward</button>
+                    </form>
                   </div>
-                  <button type="button" class="btn btn-default"><i class="far fa-trash-alt"></i> Eliminar</button>
-                  <button type="button" class="btn btn-default"><i class="fas fa-print"></i> Imprimir</button>
-                </div>
-                <!-- /.card-footer -->
+
+                </div><!-- /.container-fluid -->
               </div>
-              <!-- /.card -->
+              <!-- Main content -->
+
+              <!-- /.content -->
             </div>
-            <!-- /.col -->
-          </div>
-          <!-- /.row -->
-        </div><!-- /.container-fluid -->
-      </section>
-      <!-- /.content -->
+            <!-- /.content-wrapper -->
+
+
+            </button>
+            <!-- /.content-header -->
+
+            <!-- Main content -->
+
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+        </footer>
+        </section>
+      </div>
     </div>
     <!-- /.content-wrapper -->
     <footer class="main-footer">
       <div class="float-right d-none d-sm-block">
-
         </button>
-        <!-- /.content-header -->
-
-        <!-- Main content -->
-
-        <!-- /.content -->
       </div>
       <!-- /.content-wrapper -->
       <footer class="main-footer">
@@ -401,6 +338,8 @@
   <script>
     $.widget.bridge('uibutton', $.ui.button)
   </script>
+  <!-- Select2 -->
+  <script src=../plugins/select2/js/select2.full.min.js"></script>
   <!-- Bootstrap 4 -->
   <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
   <!-- ChartJS -->
@@ -427,32 +366,148 @@
   <script src="../dist/js/demo.js"></script>
   <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
   <script src="../dist/js/pages/dashboard.js"></script>
+  <!-- InputMask -->
+  <script src="../../plugins/moment/moment.min.js"></script>
+  <script src="../../plugins/inputmask/jquery.inputmask.min.js"></script>
   <!-- jQuery -->
-  <script src="../plugins/jquery/jquery.min.js"></script>
+  <script src="../../plugins/jquery/jquery.min.js"></script>
   <!-- jsGrid -->
-  <script src="../plugins/jsgrid/demos/db.js"></script>
-  <script src="../plugins/jsgrid/jsgrid.min.js"></script>
-
+  <script src="../../plugins/jsgrid/demos/db.js"></script>
+  <script src="../../plugins/jsgrid/jsgrid.min.js"></script>
+  </script>
   <script>
     $(function () {
-      $("#jsGrid1").jsGrid({
-        height: "100%",
-        width: "100%",
+      //Initialize Select2 Elements
+      $('.select2').select2()
 
-        sorting: true,
-        paging: true,
+      //Initialize Select2 Elements
+      $('.select2bs4').select2({
+        theme: 'bootstrap4'
+      })
 
-        data: db.clients,
+      //Datemask dd/mm/yyyy
+      $('#datemask').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' })
+      //Datemask2 mm/dd/yyyy
+      $('#datemask2').inputmask('mm/dd/yyyy', { 'placeholder': 'mm/dd/yyyy' })
+      //Money Euro
+      $('[data-mask]').inputmask()
 
-        fields: [
-          { name: "Name", type: "text", width: 150 },
-          { name: "Age", type: "number", width: 50 },
-          { name: "Address", type: "text", width: 200 },
-          { name: "Country", type: "select", items: db.countries, valueField: "Id", textField: "Name" },
-          { name: "Married", type: "checkbox", title: "Is Married" }
-        ]
+      //Date picker
+      $('#reservationdate').datetimepicker({
+        format: 'L'
       });
-    });
+
+      //Date and time picker
+      $('#reservationdatetime').datetimepicker({ icons: { time: 'far fa-clock' } });
+
+      //Date range picker
+      $('#reservation').daterangepicker()
+      //Date range picker with time picker
+      $('#reservationtime').daterangepicker({
+        timePicker: true,
+        timePickerIncrement: 30,
+        locale: {
+          format: 'MM/DD/YYYY hh:mm A'
+        }
+      })
+      //Date range as a button
+      $('#daterange-btn').daterangepicker(
+        {
+          ranges: {
+            'Today': [moment(), moment()],
+            'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+            'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+            'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+            'This Month': [moment().startOf('month'), moment().endOf('month')],
+            'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+          },
+          startDate: moment().subtract(29, 'days'),
+          endDate: moment()
+        },
+        function (start, end) {
+          $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'))
+        }
+      )
+
+      //Timepicker
+      $('#timepicker').datetimepicker({
+        format: 'LT'
+      })
+
+      //Bootstrap Duallistbox
+      $('.duallistbox').bootstrapDualListbox()
+
+      //Colorpicker
+      $('.my-colorpicker1').colorpicker()
+      //color picker with addon
+      $('.my-colorpicker2').colorpicker()
+
+      $('.my-colorpicker2').on('colorpickerChange', function (event) {
+        $('.my-colorpicker2 .fa-square').css('color', event.color.toString());
+      })
+
+      $("input[data-bootstrap-switch]").each(function () {
+        $(this).bootstrapSwitch('state', $(this).prop('checked'));
+      })
+
+    })
+    // BS-Stepper Init
+    document.addEventListener('DOMContentLoaded', function () {
+      window.stepper = new Stepper(document.querySelector('.bs-stepper'))
+    })
+
+    // DropzoneJS Demo Code Start
+    Dropzone.autoDiscover = false
+
+    // Get the template HTML and remove it from the doumenthe template HTML and remove it from the doument
+    var previewNode = document.querySelector("#template")
+    previewNode.id = ""
+    var previewTemplate = previewNode.parentNode.innerHTML
+    previewNode.parentNode.removeChild(previewNode)
+
+    var myDropzone = new Dropzone(document.body, { // Make the whole body a dropzone
+      url: "/target-url", // Set the url
+      thumbnailWidth: 80,
+      thumbnailHeight: 80,
+      parallelUploads: 20,
+      previewTemplate: previewTemplate,
+      autoQueue: false, // Make sure the files aren't queued until manually added
+      previewsContainer: "#previews", // Define the container to display the previews
+      clickable: ".fileinput-button" // Define the element that should be used as click trigger to select files.
+    })
+
+    myDropzone.on("addedfile", function (file) {
+      // Hookup the start button
+      file.previewElement.querySelector(".start").onclick = function () { myDropzone.enqueueFile(file) }
+    })
+
+    // Update the total progress bar
+    myDropzone.on("totaluploadprogress", function (progress) {
+      document.querySelector("#total-progress .progress-bar").style.width = progress + "%"
+    })
+
+    myDropzone.on("sending", function (file) {
+      // Show the total progress bar when upload starts
+      document.querySelector("#total-progress").style.opacity = "1"
+      // And disable the start button
+      file.previewElement.querySelector(".start").setAttribute("disabled", "disabled")
+    })
+
+    // Hide the total progress bar when nothing's uploading anymore
+    myDropzone.on("queuecomplete", function (progress) {
+      document.querySelector("#total-progress").style.opacity = "0"
+    })
+
+    // Setup the buttons for all transfers
+    // The "add files" button doesn't need to be setup because the config
+    // `clickable` has already been specified.
+    document.querySelector("#actions .start").onclick = function () {
+      myDropzone.enqueueFiles(myDropzone.getFilesWithStatus(Dropzone.ADDED))
+    }
+    document.querySelector("#actions .cancel").onclick = function () {
+      myDropzone.removeAllFiles(true)
+    }
+    // DropzoneJS Demo Code End
   </script>
 </body>
 

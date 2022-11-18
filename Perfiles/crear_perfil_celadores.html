@@ -17,8 +17,13 @@
   <link rel="stylesheet" href="../plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
   <!-- iCheck -->
   <link rel="stylesheet" href="../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- Select2 -->
+  <link rel="stylesheet" href="../plugins/select2/css/select2.min.css">
+  <link rel="stylesheet" href="../plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
   <!-- JQVMap -->
   <link rel="stylesheet" href="../plugins/jqvmap/jqvmap.min.css">
+  <!-- Bootstrap4 Duallistbox -->
+  <link rel="stylesheet" href="../../plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../dist/css/adminlte.min.css">
   <!-- overlayScrollbars -->
@@ -121,13 +126,13 @@
                   </a>
                   <ul class="nav nav-treeview">
                     <li class="nav-item">
-                      <a href="../../Mfsc/Reportes/Reportes.html" class="nav-link active">
+                      <a href="../Reportes/Reportes.html" class="nav-link active">
                         <i class="fas fa-clipboard-check"></i>
                         <p>Realizar reporte</p>
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a href="../../Mfsc/Lista_Reportes/ListaReportes.html" class="nav-link">
+                      <a href="../Lista_Reportes/ListaReportes.html" class="nav-link">
                         <i class="fas fa-clipboard-list"></i>
                         <p>Reportes Completos</p>
                       </a>
@@ -135,7 +140,7 @@
                   </ul>
                 </li>
                 <li class="nav-item">
-                  <a href="#" class="nav-link">
+                  <a href="../Perfiles/Perfiles_Docentes.html" class="nav-link">
                     <i class="nav-icon fas fa-users"></i>
                     <p>
                       Perfiles
@@ -145,26 +150,32 @@
                   </a>
                   <ul class="nav nav-treeview">
                     <li class="nav-item">
-                      <a href="../../Mfsc/Lista_de_Alumnos/Lista_de _Alumnos.html" class="nav-link">
+                      <a href="../Lista_de_Alumnos/Lista_de _Alumnos.html" class="nav-link">
                         <i class="fas fa-user-graduate"></i>
                         <p>Lista de Alumnos</p>
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a href="../../Mfsc/Perfiles/Perfiles_Docentes.html" class="nav-link">
+                      <a href="../Perfiles/Perfiles_Docentes.html" class="nav-link">
                         <i class="fas fa-user-tie"></i>
                         <p>Lista de Docentes</p>
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a href="../../Mfsc/Perfiles/Crear_usuario.html" class="nav-link">
+                      <a href="../Lista_Encargados/Lista_encargados.html" class="nav-link">
+                        <i class="fas fa-user-shield"></i>
+                        <p>Lista de Encargados</p>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="../Perfiles/Crear_usuario.html" class="nav-link">
                         <i class="fas fa-user-plus"></i>
                         <p>Cargar Perfil</p>
                       </a>
                     </li>
                   </ul>
                 <li class="nav-item">
-                  <a href="../../Mfsc/Horarios/Horarios.html" class="nav-link">
+                  <a href="../Horarios/Horarios.html" class="nav-link">
                     <i class="nav-icon far fa-calendar-alt"></i>
                     <p>
                       Horarios
@@ -182,13 +193,13 @@
                   </a>
                   <ul class="nav nav-treeview">
                     <li class="nav-item">
-                      <a href="../../Mfsc/Avisos/Crear_aviso.html" class="nav-link">
+                      <a href="../Avisos/Crear_aviso.html" class="nav-link">
                         <i class="fas fa-pencil-alt"></i>
                         <p>Crear Aviso</p>
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a href="../../Mfsc/Avisos/Avisos_Realizados.html" class="nav-link">
+                      <a href="../Avisos/Avisos_Realizados.html" class="nav-link">
                         <i class="fas fa-mail-bulk"></i>
                         <p>Avisos Hechos</p>
                       </a>
@@ -206,57 +217,97 @@
       <!-- Content Header (Page header) -->
       <div class="content-header">
         <div class="container-fluid">
-          <div class="row mb-2">
-            <div class="col-sm-6">
-              <h1 class="m-0">Crear perfil</h1>
-            </div><!-- /.col -->
-            <div class="col-sm-6">
+          <div class="row mb-12">
+
+            <div class="col-sm-12">
               <ol class="breadcrumb float-sm-right">
               </ol>
             </div><!-- /.col -->
           </div><!-- /.row -->
-        </div><!-- /.container-fluid -->
-      </div>
+          <section class="content">
+            <div class="container-fluid">
+              <div class="row">
+                <!-- left column -->
+                <div class="col-md-6">
+                  <!-- general form elements -->
+                  <div class="card card-primary">
+                    <div class="card-header">
+                      <h3 class="card-title">Crear Perfil - Celadores</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <!-- form start -->
+                    <form>
+                      <div class="card-body">
+                        <div class="form-group">
+                          <label for="inputName">Nombres y Apellidos</label>
+                          <input type="text" id="inputName" class="form-control">
+                        </div>
+                        <div class="form-group">
+                          <label for="inputName">Correo</label>
+                          <input type="text" id="inputName" class="form-control">
+                        </div>
+                        <div class="form-group">
+                          <label for="inputName">C.I. </label>
+                          <input type="text" id="inputName" class="form-control">
+                        </div>
+                        <div class="form-group">
+                          <label>Teléfono:</label>
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                            </div>
+                            <input type="text" class="form-control"
+                              data-inputmask="'mask': ['999-999-9999 [x99999]', '+099 99 99 9999[9]-9999']" data-mask>
+                          </div>
+                          <!-- /.input group -->
+                        </div>
+                        <div class="form-group">
+                          <label>Fecha de Nacimiento</label>
 
-      <!-- Main content -->
-      <section>
-        <section class="content">
-          <div class="container-fluid">
-            <!-- Small boxes (Stat box) -->
-            <div class="row">
-              <div class="col-2 col-sm-4">
-                <!-- small box -->
-                <div class="small-box bg-info">
-                  <div class="inner">
-                    <p>Alumnos </p>
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                            </div>
+                            <input type="text" class="form-control" data-inputmask-alias="datetime"
+                              data-inputmask-inputformat="dd/mm/yyyy" data-mask>
+                          </div>
+                          <!-- /.input group -->
+                        </div>
+                        <div class="input-group">
+                          <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="exampleInputFile">
+                            <label class="custom-file-label" for="exampleInputFile">Foto de Perfil</label>
+                          </div>
+                        </div>
+                      </div>
+                      <br>
+                      <div class="card-body">
+                        <button type="submit" class="btn btn-primary" src="crear_perfil_docentes.html">Confirmar
+                        </button>
+                      </div>
+                    </form>
                   </div>
-                  <div class="icon">
-                    <i class="fas fa-user-graduate"></i>
-                  </div>
-                  <a href="#" class="small-box-footer">Crear <i class="fas fa-plus"></i></a>
-                </div>
+
+                </div><!-- /.container-fluid -->
               </div>
-              <!-- ./col -->
-              <div class="col-2 col-sm-4">
-                <!-- small box -->
-                <div class="small-box bg-success">
-                  <div class="inner">
-                    <p>Docentes/Celadores</p>
-                  </div>
-                  <div class="icon">
-                    <i class="fas fa-user-check"></i>
-                  </div>
-                  <br>
-                  <br>
-                  <a href="#" class="small-box-footer"> Crear <i class="fas fa-plus"></i></a>
-                </div>
-              </div>
+              <!-- Main content -->
+
+              <!-- /.content -->
             </div>
-          </div>
+            <!-- /.content-wrapper -->
 
 
+            </button>
+            <!-- /.content-header -->
+
+            <!-- Main content -->
+
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+        </footer>
         </section>
-        <!-- /.content -->
+      </div>
     </div>
     <!-- /.content-wrapper -->
     <footer class="main-footer">
@@ -289,6 +340,8 @@
   <script>
     $.widget.bridge('uibutton', $.ui.button)
   </script>
+  <!-- Select2 -->
+  <script src=../plugins/select2/js/select2.full.min.js"></script>
   <!-- Bootstrap 4 -->
   <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
   <!-- ChartJS -->
@@ -315,13 +368,149 @@
   <script src="../dist/js/demo.js"></script>
   <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
   <script src="../dist/js/pages/dashboard.js"></script>
+  <!-- InputMask -->
+  <script src="../../plugins/moment/moment.min.js"></script>
+  <script src="../../plugins/inputmask/jquery.inputmask.min.js"></script>
   <!-- jQuery -->
   <script src="../../plugins/jquery/jquery.min.js"></script>
   <!-- jsGrid -->
   <script src="../../plugins/jsgrid/demos/db.js"></script>
   <script src="../../plugins/jsgrid/jsgrid.min.js"></script>
   </script>
+  <script>
+    $(function () {
+      //Initialize Select2 Elements
+      $('.select2').select2()
 
+      //Initialize Select2 Elements
+      $('.select2bs4').select2({
+        theme: 'bootstrap4'
+      })
+
+      //Datemask dd/mm/yyyy
+      $('#datemask').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' })
+      //Datemask2 mm/dd/yyyy
+      $('#datemask2').inputmask('mm/dd/yyyy', { 'placeholder': 'mm/dd/yyyy' })
+      //Money Euro
+      $('[data-mask]').inputmask()
+
+      //Date picker
+      $('#reservationdate').datetimepicker({
+        format: 'L'
+      });
+
+      //Date and time picker
+      $('#reservationdatetime').datetimepicker({ icons: { time: 'far fa-clock' } });
+
+      //Date range picker
+      $('#reservation').daterangepicker()
+      //Date range picker with time picker
+      $('#reservationtime').daterangepicker({
+        timePicker: true,
+        timePickerIncrement: 30,
+        locale: {
+          format: 'MM/DD/YYYY hh:mm A'
+        }
+      })
+      //Date range as a button
+      $('#daterange-btn').daterangepicker(
+        {
+          ranges: {
+            'Today': [moment(), moment()],
+            'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+            'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+            'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+            'This Month': [moment().startOf('month'), moment().endOf('month')],
+            'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+          },
+          startDate: moment().subtract(29, 'days'),
+          endDate: moment()
+        },
+        function (start, end) {
+          $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'))
+        }
+      )
+
+      //Timepicker
+      $('#timepicker').datetimepicker({
+        format: 'LT'
+      })
+
+      //Bootstrap Duallistbox
+      $('.duallistbox').bootstrapDualListbox()
+
+      //Colorpicker
+      $('.my-colorpicker1').colorpicker()
+      //color picker with addon
+      $('.my-colorpicker2').colorpicker()
+
+      $('.my-colorpicker2').on('colorpickerChange', function (event) {
+        $('.my-colorpicker2 .fa-square').css('color', event.color.toString());
+      })
+
+      $("input[data-bootstrap-switch]").each(function () {
+        $(this).bootstrapSwitch('state', $(this).prop('checked'));
+      })
+
+    })
+    // BS-Stepper Init
+    document.addEventListener('DOMContentLoaded', function () {
+      window.stepper = new Stepper(document.querySelector('.bs-stepper'))
+    })
+
+    // DropzoneJS Demo Code Start
+    Dropzone.autoDiscover = false
+
+    // Get the template HTML and remove it from the doumenthe template HTML and remove it from the doument
+    var previewNode = document.querySelector("#template")
+    previewNode.id = ""
+    var previewTemplate = previewNode.parentNode.innerHTML
+    previewNode.parentNode.removeChild(previewNode)
+
+    var myDropzone = new Dropzone(document.body, { // Make the whole body a dropzone
+      url: "/target-url", // Set the url
+      thumbnailWidth: 80,
+      thumbnailHeight: 80,
+      parallelUploads: 20,
+      previewTemplate: previewTemplate,
+      autoQueue: false, // Make sure the files aren't queued until manually added
+      previewsContainer: "#previews", // Define the container to display the previews
+      clickable: ".fileinput-button" // Define the element that should be used as click trigger to select files.
+    })
+
+    myDropzone.on("addedfile", function (file) {
+      // Hookup the start button
+      file.previewElement.querySelector(".start").onclick = function () { myDropzone.enqueueFile(file) }
+    })
+
+    // Update the total progress bar
+    myDropzone.on("totaluploadprogress", function (progress) {
+      document.querySelector("#total-progress .progress-bar").style.width = progress + "%"
+    })
+
+    myDropzone.on("sending", function (file) {
+      // Show the total progress bar when upload starts
+      document.querySelector("#total-progress").style.opacity = "1"
+      // And disable the start button
+      file.previewElement.querySelector(".start").setAttribute("disabled", "disabled")
+    })
+
+    // Hide the total progress bar when nothing's uploading anymore
+    myDropzone.on("queuecomplete", function (progress) {
+      document.querySelector("#total-progress").style.opacity = "0"
+    })
+
+    // Setup the buttons for all transfers
+    // The "add files" button doesn't need to be setup because the config
+    // `clickable` has already been specified.
+    document.querySelector("#actions .start").onclick = function () {
+      myDropzone.enqueueFiles(myDropzone.getFilesWithStatus(Dropzone.ADDED))
+    }
+    document.querySelector("#actions .cancel").onclick = function () {
+      myDropzone.removeAllFiles(true)
+    }
+    // DropzoneJS Demo Code End
+  </script>
 </body>
 
 </html>
